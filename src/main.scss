@@ -1,0 +1,240 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,400&display=swap);
+//fonts on google apis 
+
+*{
+    padding:0;
+    margin:0;
+    font-size: border-box;
+    font-size: 'Spartan', sans-serif;
+}
+
+:root {
+    /* Primary colors */
+    --PrimaryColor: hsl(255, 50%, 48%);
+    --SecondaryColor:hsl(180, 17%,  95%);
+    --colorOne: hsl(15,74%, 70%);
+    --colorTwo: hsl(28,100%, 82%); 
+    --HoverColor: hsl(225,56%,59%);
+
+    --primary: #3498db;        /* Primary brand color */
+    --secondary: #2ecc71;      /* Secondary color */
+    --tertiary: #9b59b6;       /* Tertiary color */
+    --quaternary: #e74c3c;
+    --PrimaryColor: blue;
+    --HoverColor: #ff6347;
+    --greyText: #808080;    /* Quaternary color */
+    
+    /* Accent colors */
+    --accent: #f39c12;         /* Accent color */
+    --accent-light: #f1c40f;   /* Lighter accent shade */
+    --accent-dark: #d35400;    /* Darker accent shade */
+    
+    /* Neutrals */
+    --black: #000000;          /* Black */
+    --white: #ffffff;          /* White */
+    --gray: #bdc3c7;    
+    --blue: blue;       /* Gray */
+    --light-gray: #ecf0f1;     /* Light Gray */
+    --dark-gray: #34495e;
+    --textColor: hsl(240, 1%, 48%);
+    --borderColor:hsl(0,0%,83%);  
+    --whiteColorDea:hsl(0,0%,93%) ; /* Dark Gray */
+    --boxShadow: box-shadow: rbga(0,0,0,0.1) 0px 10px 15px -3px rgba(0,0,0,0.05) 0px 4px 6px -2px;
+    --success: #27ae60;        /* Success color */
+    --info: #3498db;           /* Info color */
+    --warning: #f1c40f;        /* Warning color */
+    --danger: #e74c3c;         /* Danger color */
+    --purple: #8e44ad;         /* Purple */
+    --pink: #e91e63;           /* Pink */
+    --cyan: #00bcd4;           /* Cyan */
+    --teal: #009688;           /* Teal */
+    --lime: #cddc39;           /* Lime */
+    --amber: #ffc107;          /* Amber */
+    --brown: #795548;          /* Brown */
+    --transition: .4s ease-in-out;
+    --greybg: hsl(0,0%,96%);
+    --inputColor: hsl(330,12%, 97%);
+  }
+  
+
+body{
+      background: var( --white);
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  li{
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .section{
+    padding: 64px 0 32px;
+  }
+
+  .container{
+    padding-left: 24px; //1.5rem
+    padding-right: 24px;
+  }
+
+   
+    icon{
+        font-size: 20.8px; //1.3rem
+    }
+
+    .flex{
+        display:flex;
+        align-items: center;
+    }
+
+    grid{
+        display:none;
+        align-items: center;
+
+    }
+
+    .none{
+        display: none;
+    }
+
+    .btn{
+        padding: 1.2 px 24 px; //.7rem 1.5rem
+        background: var(--PrimaryColor);
+        border: none;
+        outline: none;
+        border-radius: 48px; //3rem
+        cursor: pointer;
+        color: var(--white);
+    }
+
+    a{
+        color:var(--white);
+        font-weight: 500;
+    }
+    &:hover{
+        background:var(--HoverColor);
+    }
+
+img,video{
+    width: 100%;
+    height:auto;
+}
+input{
+    font-size:100;
+    color: var(--greyText);
+    line-height: 22px;
+}
+
+h4{
+    padding: 16px; //1rem 0;
+    font-weight: 700;
+    color: var(--black);
+}
+
+h2{
+    font-size: 25px;
+    padding: 16px; //1rem 0;
+}
+
+
+
+.navbar{
+    position: fixed ;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1000;
+
+    .navBarOne, .navBarTwo{
+        justify-content: space-between;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .navBarOne{
+        background: var(--secondary);
+
+        .icon:hover{
+             color: var(--PrimaryColor);
+        }
+
+        .abt{
+            gap: 1rem;
+
+            span{
+                color: var(--black);
+                font-size:13px;
+                cursor:pointer;
+
+                &:hover{
+                    color: var(--PrimaryColor);
+                    font-size: 700;
+                }
+            }
+        }
+    }
+
+    .navBarTwo{
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        top: 3rem;
+        padding: 1.5rem;
+        position: fixed;
+        transition: .3s ease-in-out;    
+
+        .flightdiv{
+            .Flight{
+                width: 20%;
+            }
+
+        }
+        
+        @media screen and (max-width: 768px){
+              .navBarmenu{
+                position: absolute;
+                background: var(--secondary);
+                padding: 1.5rem;
+                border-radius: 10px;
+                top: 5rem;  
+                right: -50%;
+                width: 80%;
+                transform: translateX(50%);
+                z-index: 2000;
+                box-shadow: rgba(0,0,0,0.1) 0px 10px 15px -3px, rgba(0,0,0,0.05) 0px 4px 6px -2px;
+                border: 3px solid var(--white);
+                transition: .4s ease-in-out;
+
+
+                .menu{
+                    flex-direction: column;
+                    gap: .5rem;
+                    text-align: center;
+
+                    .listItem{
+                        padding: .5rem 0;
+                        cursor: pointer;
+                        color: var(--black);
+
+
+                        &:hover{
+                            color: var(--PrimaryColor);
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .btnOne{
+                    display: block;
+                    justify-content: center;
+                    margin: auto;
+                    margin-top: 1rem ;
+
+                }
+
+            }
+        }
+
+    }
+}
